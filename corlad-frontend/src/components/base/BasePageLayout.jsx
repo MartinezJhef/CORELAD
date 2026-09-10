@@ -139,6 +139,22 @@ export const BasePageLayout = ({ children, activeModule = 'CLI', currentView = '
             >
               2. Calificación & SUNEDU (Secretaría)
             </button>
+            <button
+              type="button"
+              onClick={() => onViewChange && onViewChange('MATRIC')}
+              style={{
+                fontWeight: currentView === 'MATRIC' ? 700 : 500,
+                fontSize: '0.88rem',
+                color: currentView === 'MATRIC' ? 'var(--color-verde-uo)' : 'var(--color-gris-carbon)',
+                borderBottom: currentView === 'MATRIC' ? '2.5px solid var(--color-verde-uo)' : '2.5px solid transparent',
+                padding: '0.4rem 0.2rem',
+                background: 'none',
+                border: 'none',
+                cursor: 'pointer',
+              }}
+            >
+              3. Matrícula & Carnet (Decanatura)
+            </button>
           </nav>
 
           {/* Botones de Acción */}
@@ -219,6 +235,24 @@ export const BasePageLayout = ({ children, activeModule = 'CLI', currentView = '
               }}
             >
               2. Calificación & SUNEDU (Secretaría)
+            </button>
+            <button
+              type="button"
+              onClick={() => {
+                if (onViewChange) onViewChange('MATRIC');
+                setMobileMenuOpen(false);
+              }}
+              style={{
+                textAlign: 'left',
+                fontWeight: currentView === 'MATRIC' ? 700 : 500,
+                color: currentView === 'MATRIC' ? 'var(--color-verde-uo)' : 'var(--color-gris-carbon)',
+                background: 'none',
+                border: 'none',
+                cursor: 'pointer',
+                padding: '0.4rem 0',
+              }}
+            >
+              3. Matrícula & Carnet (Decanatura)
             </button>
           </div>
         )}
