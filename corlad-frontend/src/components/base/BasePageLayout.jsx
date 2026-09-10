@@ -3,7 +3,7 @@ import { BaseNotification } from './BaseNotification';
 import { Menu, X, Shield, FileText, Search, UserCheck, Award, Phone, Mail, MapPin } from 'lucide-react';
 import { BaseButton } from './BaseButton';
 
-export const BasePageLayout = ({ children, activeModule = 'CLI', onTrackingClick }) => {
+export const BasePageLayout = ({ children, activeModule = 'CLI', currentView = 'CALIF', onViewChange, onTrackingClick }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -103,34 +103,42 @@ export const BasePageLayout = ({ children, activeModule = 'CLI', onTrackingClick
             style={{
               display: 'none',
               alignItems: 'center',
-              gap: '1.5rem',
+              gap: '1.25rem',
             }}
             className="desktop-nav"
           >
-            <a
-              href="#preinscripcion"
+            <button
+              type="button"
+              onClick={() => onViewChange && onViewChange('PREINSC')}
               style={{
-                fontWeight: 600,
-                fontSize: '0.9rem',
-                color: activeModule === 'CLI' ? 'var(--color-verde-uo)' : 'var(--color-gris-carbon)',
-                borderBottom: activeModule === 'CLI' ? '2px solid var(--color-verde-uo)' : '2px solid transparent',
-                paddingBottom: '0.25rem',
+                fontWeight: currentView === 'PREINSC' ? 700 : 500,
+                fontSize: '0.88rem',
+                color: currentView === 'PREINSC' ? 'var(--color-verde-uo)' : 'var(--color-gris-carbon)',
+                borderBottom: currentView === 'PREINSC' ? '2.5px solid var(--color-verde-uo)' : '2.5px solid transparent',
+                padding: '0.4rem 0.2rem',
+                background: 'none',
+                border: 'none',
+                cursor: 'pointer',
               }}
             >
-              Pre-inscripción
-            </a>
-            <a
-              href="#requisitos"
-              style={{ fontWeight: 600, fontSize: '0.9rem', color: 'var(--color-gris-carbon)' }}
+              1. Pre-inscripción (Postulante)
+            </button>
+            <button
+              type="button"
+              onClick={() => onViewChange && onViewChange('CALIF')}
+              style={{
+                fontWeight: currentView === 'CALIF' ? 700 : 500,
+                fontSize: '0.88rem',
+                color: currentView === 'CALIF' ? 'var(--color-verde-uo)' : 'var(--color-gris-carbon)',
+                borderBottom: currentView === 'CALIF' ? '2.5px solid var(--color-verde-uo)' : '2.5px solid transparent',
+                padding: '0.4rem 0.2rem',
+                background: 'none',
+                border: 'none',
+                cursor: 'pointer',
+              }}
             >
-              Requisitos
-            </a>
-            <a
-              href="#habilidad"
-              style={{ fontWeight: 600, fontSize: '0.9rem', color: 'var(--color-gris-carbon)' }}
-            >
-              Verificar Habilidad
-            </a>
+              2. Calificación & SUNEDU (Secretaría)
+            </button>
           </nav>
 
           {/* Botones de Acción */}
@@ -176,27 +184,42 @@ export const BasePageLayout = ({ children, activeModule = 'CLI', onTrackingClick
               gap: '0.85rem',
             }}
           >
-            <a
-              href="#preinscripcion"
-              onClick={() => setMobileMenuOpen(false)}
-              style={{ fontSize: '0.95rem', fontWeight: 600, color: 'var(--color-verde-uo)' }}
+            <button
+              type="button"
+              onClick={() => {
+                if (onViewChange) onViewChange('PREINSC');
+                setMobileMenuOpen(false);
+              }}
+              style={{
+                textAlign: 'left',
+                fontWeight: currentView === 'PREINSC' ? 700 : 500,
+                color: currentView === 'PREINSC' ? 'var(--color-verde-uo)' : 'var(--color-gris-carbon)',
+                background: 'none',
+                border: 'none',
+                cursor: 'pointer',
+                padding: '0.4rem 0',
+              }}
             >
-              Pre-inscripción Digital
-            </a>
-            <a
-              href="#requisitos"
-              onClick={() => setMobileMenuOpen(false)}
-              style={{ fontSize: '0.95rem', fontWeight: 600, color: 'var(--color-gris-carbon)' }}
+              1. Pre-inscripción (Postulante)
+            </button>
+            <button
+              type="button"
+              onClick={() => {
+                if (onViewChange) onViewChange('CALIF');
+                setMobileMenuOpen(false);
+              }}
+              style={{
+                textAlign: 'left',
+                fontWeight: currentView === 'CALIF' ? 700 : 500,
+                color: currentView === 'CALIF' ? 'var(--color-verde-uo)' : 'var(--color-gris-carbon)',
+                background: 'none',
+                border: 'none',
+                cursor: 'pointer',
+                padding: '0.4rem 0',
+              }}
             >
-              Requisitos de Colegiatura
-            </a>
-            <a
-              href="#habilidad"
-              onClick={() => setMobileMenuOpen(false)}
-              style={{ fontSize: '0.95rem', fontWeight: 600, color: 'var(--color-gris-carbon)' }}
-            >
-              Verificar Habilidad
-            </a>
+              2. Calificación & SUNEDU (Secretaría)
+            </button>
           </div>
         )}
       </header>
