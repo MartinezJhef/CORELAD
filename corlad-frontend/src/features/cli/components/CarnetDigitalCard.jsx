@@ -92,7 +92,8 @@ export const CarnetDigitalCard = ({ carnet, onClose }) => {
           perspective: '1000px',
           width: '100%',
           maxWidth: '460px',
-          height: '285px',
+          minHeight: '280px',
+          height: 'clamp(275px, 58vw, 290px)',
         }}
       >
         <div
@@ -121,7 +122,7 @@ export const CarnetDigitalCard = ({ carnet, onClose }) => {
               display: 'flex',
               flexDirection: 'column',
               justifyContent: 'space-between',
-              padding: '1.2rem',
+              padding: 'clamp(0.85rem, 2.5vw, 1.2rem)',
               userSelect: 'none',
             }}
           >
@@ -319,7 +320,7 @@ export const CarnetDigitalCard = ({ carnet, onClose }) => {
               display: 'flex',
               flexDirection: 'column',
               justifyContent: 'space-between',
-              padding: '1.2rem',
+              padding: 'clamp(0.85rem, 2.5vw, 1.2rem)',
               userSelect: 'none',
             }}
           >
