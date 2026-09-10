@@ -33,76 +33,76 @@ export const CalificacionPage = () => {
     {
       accessor: 'numeroExpediente',
       header: 'N.° Expediente',
-      render: (valor) => (
+      render: (row) => (
         <span className="font-mono font-bold text-[#FEE11A] bg-black/40 px-2.5 py-1 rounded-md border border-[#F5A604]/40">
-          {valor}
+          {row.numeroExpediente}
         </span>
       ),
     },
     {
       accessor: 'nombrePostulante',
       header: 'Postulante Titulado',
-      render: (valor, fila) => (
+      render: (row) => (
         <div>
-          <div className="font-semibold text-white">{valor}</div>
-          <div className="text-xs text-gray-400">DNI: {fila.dniPostulante}</div>
+          <div className="font-semibold text-white">{row.nombrePostulante}</div>
+          <div className="text-xs text-gray-400">DNI: {row.dniPostulante}</div>
         </div>
       ),
     },
     {
       accessor: 'universidad',
       header: 'Universidad de Origen',
-      render: (valor) => <span className="text-xs text-gray-200">{valor}</span>,
+      render: (row) => <span className="text-xs text-gray-200">{row.universidad}</span>,
     },
     {
       accessor: 'tituloProfesional',
       header: 'Grado / Título',
-      render: (valor) => <span className="text-xs font-medium text-emerald-400">{valor}</span>,
+      render: (row) => <span className="text-xs font-medium text-emerald-400">{row.tituloProfesional}</span>,
     },
     {
       accessor: 'fechaPresentacion',
       header: 'Presentación',
-      render: (valor) => (
+      render: (row) => (
         <span className="text-xs text-gray-400">
-          {new Date(valor).toLocaleDateString()}
+          {new Date(row.fechaPresentacion).toLocaleDateString()}
         </span>
       ),
     },
     {
       accessor: 'totalDocumentos',
       header: 'Legajo',
-      render: (valor) => (
+      render: (row) => (
         <span className="text-xs bg-gray-800 text-gray-300 px-2 py-0.5 rounded border border-gray-700">
-          {valor} docs
+          {row.totalDocumentos} docs
         </span>
       ),
     },
     {
       accessor: 'validadoSunedu',
       header: 'SUNEDU',
-      render: (valor) => (
-        <BaseBadge variant={valor ? 'success' : 'warning'}>
-          {valor ? 'VALIDADO' : 'PENDIENTE'}
+      render: (row) => (
+        <BaseBadge variant={row.validadoSunedu ? 'success' : 'warning'}>
+          {row.validadoSunedu ? 'VALIDADO' : 'PENDIENTE'}
         </BaseBadge>
       ),
     },
     {
       accessor: 'estadoRevision',
       header: 'Estado',
-      render: (valor) => (
+      render: (row) => (
         <BaseBadge variant="info">
-          {valor || 'EN REVISIÓN'}
+          {row.estadoRevision || 'EN REVISIÓN'}
         </BaseBadge>
       ),
     },
     {
       accessor: 'acciones',
       header: 'Acciones',
-      render: (_, fila) => (
+      render: (row) => (
         <BaseButton
           variant="primary"
           size="sm"
-          onClick={() => abrirAuditoria(fila.expedienteId)}
+          onClick={() => abrirAuditoria(row.expedienteId)}
           className="shadow-md shadow-[#007030]/20 text-xs font-semibold"
         >
           Auditar & Calificar

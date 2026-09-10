@@ -155,10 +155,9 @@ export const BaseDataTable = ({
                 >
                   {columns.map((col, cIdx) => {
                     const key = col.accessor || col.key;
-                    const val = key ? row[key] : undefined;
                     return (
                       <td key={cIdx} style={{ padding: '0.9rem 1.25rem', color: 'var(--color-gris-carbon)' }}>
-                        {col.render ? (col.render.length > 1 ? col.render(val, row) : col.render(row)) : (val ?? '-')}
+                        {col.render ? col.render(row) : (row[key] ?? '-')}
                       </td>
                     );
                   })}
