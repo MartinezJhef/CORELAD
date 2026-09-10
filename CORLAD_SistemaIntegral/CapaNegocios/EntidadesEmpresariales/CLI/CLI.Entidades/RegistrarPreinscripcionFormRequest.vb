@@ -10,6 +10,12 @@ Namespace CLI.Entidades
         Public Property EsValido As Boolean = True
         Public Property Errores As New List(Of FormValidationError)()
 
+        Public ReadOnly Property PrimerMensajeError As String
+            Get
+                Return If(Errores.Count > 0, Errores(0).Mensaje, String.Empty)
+            End Get
+        End Property
+
         Public Sub AgregarError(campo As String, mensaje As String)
             EsValido = False
             Errores.Add(New FormValidationError With {.Campo = campo, .Mensaje = mensaje})
