@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <RootNamespace></RootNamespace>
     <TargetFramework>net8.0</TargetFramework>
@@ -9,5 +9,7 @@
     <ProjectReference Include="..\..\CapaNegocios\FlujoTrabajoEmpresariales\CAJ\CAJ.FlujoTrabajo\CAJ.FlujoTrabajo.vbproj" />
     <ProjectReference Include="..\..\CapaNegocios\FlujoTrabajoEmpresariales\MLA\MLA.FlujoTrabajo\MLA.FlujoTrabajo.vbproj" />
     <ProjectReference Include="..\..\CapaNegocios\FlujoTrabajoEmpresariales\GEN\GEN.FlujoTrabajo\GEN.FlujoTrabajo.vbproj" />
+    <ProjectReference Include="..\..\CapaNegocios\EntidadesEmpresariales\CLI\CLI.Entidades\CLI.Entidades.vbproj" />
+    <ProjectReference Include="..\..\CapaInfraestructuraComun\AdminitracionOperacional\GEN.Infraestructura\GEN.Infraestructura.vbproj" />
   </ItemGroup>
 </Project>
