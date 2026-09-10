@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <RootNamespace></RootNamespace>
+    <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\EntidadesEmpresariales\CAJ\CAJ.Entidades\CAJ.Entidades.vbproj" />
+    <ProjectReference Include="..\..\..\InterfacesServicios\CAJ\CAJ.InterfacesServicios\CAJ.InterfacesServicios.vbproj" />
+    <ProjectReference Include="..\..\..\..\CapaAccesoDatos\ComponenteLogicoAccesoDatos\CAJ\CAJ.AccesoDatos\CAJ.AccesoDatos.vbproj" />
+    <ProjectReference Include="..\..\..\..\CapaInfraestructuraComun\AdminitracionOperacional\GEN.Infraestructura\GEN.Infraestructura.vbproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <RootNamespace></RootNamespace>
+    <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\EntidadesEmpresariales\GRH\GRH.Entidades\GRH.Entidades.vbproj" />
+    <ProjectReference Include="..\..\..\InterfacesServicios\GRH\GRH.InterfacesServicios\GRH.InterfacesServicios.vbproj" />
+    <ProjectReference Include="..\..\..\..\CapaAccesoDatos\ComponenteLogicoAccesoDatos\GRH\GRH.AccesoDatos\GRH.AccesoDatos.vbproj" />
+    <ProjectReference Include="..\..\..\..\CapaInfraestructuraComun\AdminitracionOperacional\GEN.Infraestructura\GEN.Infraestructura.vbproj" />
+  </ItemGroup>
+</Project>

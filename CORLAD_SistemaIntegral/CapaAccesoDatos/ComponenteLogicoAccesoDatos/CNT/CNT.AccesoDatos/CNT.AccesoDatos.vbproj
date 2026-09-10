@@ -1,0 +1,11 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <RootNamespace></RootNamespace>
+    <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\CapaNegocios\EntidadesEmpresariales\CNT\CNT.Entidades\CNT.Entidades.vbproj" />
+    <ProjectReference Include="..\..\..\..\CapaNegocios\InterfacesServicios\CNT\CNT.InterfacesServicios\CNT.InterfacesServicios.vbproj" />
+    <ProjectReference Include="..\..\..\Helper\Helper.AccesoDatos\Helper.AccesoDatos.vbproj" />
+  </ItemGroup>
+</Project>

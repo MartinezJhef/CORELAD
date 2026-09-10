@@ -1,0 +1,48 @@
+================================================================================
+GUÍA DEL ESTADO DEL ARTE Y PAQUETE DE 60 FUENTES CIENTÍFICAS (PDF EN ESPAÑOL)
+TESIS: "IMPLEMENTACIÓN DE UN SISTEMA WEB BASADO EN MACHINE LEARNING PARA MEJORAR LA CALIDAD DE SERVICIO EN EL CORLAD JUNÍN, 2026"
+================================================================================
+
+Este directorio contiene la compilación completa de 60 artículos científicos en idioma español, guardados individualmente en formato .PDF y rigurosamente indexados para respaldar la reorientación temática y metodológica de la Tesis.
+
+--------------------------------------------------------------------------------
+1. ESTRUCTURA Y DISTRIBUCIÓN POR EJES TEMÁTICOS (60 ARTÍCULOS)
+--------------------------------------------------------------------------------
+- EJE 1: Machine Learning y Modelos Predictivos en Calidad de Servicio (Artículos 01 a 18 - 18 PDFs)
+  Enfoque: Algoritmos supervisados (Random Forest, SVM, XGBoost, Naïve Bayes, KNN, Redes Neuronales, MLOps) para predecir la satisfacción del colegiado, clasificar reclamos automatizados y estimar tiempos de atención.
+
+- EJE 2: Desarrollo con Metodología XP (Extreme Programming) (Artículos 19 a 34 - 16 PDFs)
+  Enfoque: Fundamentación teórica y técnica del marco ágil Extreme Programming (XP), sus 12 prácticas clave (TDD, Refactorización continua, Programación en Pareja, Historias de Usuario, Integración Continua CI/CD) para el desarrollo acelerado del sistema web del CORLAD.
+
+- EJE 3: Calidad de Servicio, SERVQUAL y Satisfacción Institucional (Artículos 35 a 48 - 14 PDFs)
+  Enfoque: Modelos multidimensionales SERVQUAL y e-SERVQUAL para evaluar las brechas de atención, fiabilidad, capacidad de respuesta y satisfacción en organizaciones gremiales y entidades públicas.
+
+- EJE 4: Sistemas Web, Gobierno Digital y Gestión Documental (Artículos 49 a 60 - 12 PDFs)
+  Enfoque: Plataformas digitales, arquitectura de software web, gobierno electrónico, desmaterialización de documentos, firmas digitales y normativas de simplificación administrativa en el Perú (con énfasis regional en Junín).
+
+--------------------------------------------------------------------------------
+2. FUENTES Y BASES DE DATOS DE INDEXACIÓN
+--------------------------------------------------------------------------------
+Todos los artículos seleccionados proceden de revistas indexadas en bases reconocidas:
+- SciELO (Scientific Electronic Library Online)
+- Scopus (Elsevier Q1, Q2, Q3, Q4)
+- Dialnet (Universidad de La Rioja)
+- Redalyc (Red de Revistas Científicas de América Latina)
+- IEEE Xplore / IEEE Latin America Transactions
+- Latindex / Repositorios Institucionales Acreditados
+
+--------------------------------------------------------------------------------
+3. ARCHIVOS DE NAVEGACIÓN E ÍNDICE INCLUIDOS
+--------------------------------------------------------------------------------
+- INDICE_60_ARTICULOS_ESTADO_DEL_ARTE.csv: Matriz completa en formato CSV para importación directa a Excel o SPSS, con la correspondencia exacta entre archivo PDF, título, autores, año, revista, base de datos y aplicación en la tesis.
+- MATRIZ_ESTADO_DEL_ARTE_60_ARTICULOS.md: Documento de síntesis conceptual y mapeo para ser copiado/pegado directamente en los capítulos de la tesis (Capítulo II: Marco Teórico y Estado del Arte).
+
+--------------------------------------------------------------------------------
+4. RECOMENDACIONES DE USO EN LA TESIS
+--------------------------------------------------------------------------------
+1. Antecedentes Internacionales y Nacionales: Utilizar los artículos de los Ejes 1 y 2 para respaldar la innovación del Sistema Web con Machine Learning y Metodología XP.
+2. Bases Teóricas de la Variable Independiente: Utilizar los artículos 01-18 para definir Machine Learning y 19-34 para definir Extreme Programming (XP).
+3. Bases Teóricas de la Variable Dependiente: Utilizar los artículos 35-48 para definir Calidad de Servicio y SERVQUAL.
+4. Marco Contextual y Justificación: Utilizar los artículos 49-60 para sustentar la problemática del CORLAD Junín en el contexto del Gobierno Digital peruano.
+
+Organizado y generado para la Tesis CORLAD Junín 2026.
