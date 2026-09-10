@@ -1,4 +1,5 @@
 import React from 'react';
+import { FileText, ShieldCheck, Clock, CheckCircle } from 'lucide-react';
 import { BasePageHeader } from '../../../components/base/BasePageHeader';
 import { BaseMetricCard } from '../../../components/base/BaseMetricCard';
 import { BaseDataTable } from '../../../components/base/BaseDataTable';
@@ -140,12 +141,8 @@ export const CalificacionPage = () => {
           value={expedientes.length}
           trend="+12%"
           trendLabel="vs semana anterior"
-          variant="default"
-          icon={
-            <svg className="w-6 h-6 text-[#FEE11A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-            </svg>
-          }
+          icon={FileText}
+          color="var(--color-amarillo-zapallo)"
         />
 
         <BaseMetricCard
@@ -153,12 +150,8 @@ export const CalificacionPage = () => {
           value="94.8%"
           trend="+4.2%"
           trendLabel="contrastación digital PIDE"
-          variant="success"
-          icon={
-            <svg className="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-            </svg>
-          }
+          icon={ShieldCheck}
+          color="var(--color-verde-uo)"
         />
 
         <BaseMetricCard
@@ -166,12 +159,8 @@ export const CalificacionPage = () => {
           value="18.5 hrs"
           trend="-35%"
           trendLabel="tiempo de calificación óptimo"
-          variant="warning"
-          icon={
-            <svg className="w-6 h-6 text-[#F5A604]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-          }
+          icon={Clock}
+          color="var(--color-amarillo-zapallo)"
         />
 
         <BaseMetricCard
@@ -179,12 +168,8 @@ export const CalificacionPage = () => {
           value="98.2%"
           trend="Excelente"
           trendLabel="integridad con hash SHA-256"
-          variant="info"
-          icon={
-            <svg className="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-            </svg>
-          }
+          icon={CheckCircle}
+          color="var(--color-verde-uo)"
         />
       </div>
 
