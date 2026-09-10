@@ -42,7 +42,7 @@ export const BaseMetricCard = ({
               color: color,
             }}
           >
-            <Icon size={24} />
+            {React.isValidElement(Icon) ? Icon : <Icon size={24} />}
           </div>
         )}
       </div>
