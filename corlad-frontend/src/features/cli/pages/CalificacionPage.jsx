@@ -30,8 +30,8 @@ export const CalificacionPage = () => {
   // Definición de columnas para BaseDataTable
   const columnas = [
     {
-      key: 'numeroExpediente',
-      label: 'N.° Expediente',
+      accessor: 'numeroExpediente',
+      header: 'N.° Expediente',
       render: (valor) => (
         <span className="font-mono font-bold text-[#FEE11A] bg-black/40 px-2.5 py-1 rounded-md border border-[#F5A604]/40">
           {valor}
@@ -39,8 +39,8 @@ export const CalificacionPage = () => {
       ),
     },
     {
-      key: 'nombrePostulante',
-      label: 'Postulante Titulado',
+      accessor: 'nombrePostulante',
+      header: 'Postulante Titulado',
       render: (valor, fila) => (
         <div>
           <div className="font-semibold text-white">{valor}</div>
@@ -49,18 +49,18 @@ export const CalificacionPage = () => {
       ),
     },
     {
-      key: 'universidad',
-      label: 'Universidad de Origen',
+      accessor: 'universidad',
+      header: 'Universidad de Origen',
       render: (valor) => <span className="text-xs text-gray-200">{valor}</span>,
     },
     {
-      key: 'tituloProfesional',
-      label: 'Grado / Título',
+      accessor: 'tituloProfesional',
+      header: 'Grado / Título',
       render: (valor) => <span className="text-xs font-medium text-emerald-400">{valor}</span>,
     },
     {
-      key: 'fechaPresentacion',
-      label: 'Presentación',
+      accessor: 'fechaPresentacion',
+      header: 'Presentación',
       render: (valor) => (
         <span className="text-xs text-gray-400">
           {new Date(valor).toLocaleDateString()}
@@ -68,8 +68,8 @@ export const CalificacionPage = () => {
       ),
     },
     {
-      key: 'totalDocumentos',
-      label: 'Legajo',
+      accessor: 'totalDocumentos',
+      header: 'Legajo',
       render: (valor) => (
         <span className="text-xs bg-gray-800 text-gray-300 px-2 py-0.5 rounded border border-gray-700">
           {valor} docs
@@ -77,8 +77,8 @@ export const CalificacionPage = () => {
       ),
     },
     {
-      key: 'validadoSunedu',
-      label: 'SUNEDU',
+      accessor: 'validadoSunedu',
+      header: 'SUNEDU',
       render: (valor) => (
         <BaseBadge variant={valor ? 'success' : 'warning'}>
           {valor ? 'VALIDADO' : 'PENDIENTE'}
@@ -86,8 +86,8 @@ export const CalificacionPage = () => {
       ),
     },
     {
-      key: 'estadoRevision',
-      label: 'Estado',
+      accessor: 'estadoRevision',
+      header: 'Estado',
       render: (valor) => (
         <BaseBadge variant="info">
           {valor || 'EN REVISIÓN'}
@@ -95,8 +95,8 @@ export const CalificacionPage = () => {
       ),
     },
     {
-      key: 'acciones',
-      label: 'Acciones',
+      accessor: 'acciones',
+      header: 'Acciones',
       render: (_, fila) => (
         <BaseButton
           variant="primary"

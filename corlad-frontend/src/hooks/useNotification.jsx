@@ -1,6 +1,5 @@
 import React, { createContext, useContext, useState, useCallback } from 'react';
 
-
 const NotificationContext = createContext(null);
 
 export const NotificationProvider = ({ children }) => {
@@ -23,10 +22,26 @@ export const NotificationProvider = ({ children }) => {
   }, [removeNotification]);
 
   const notify = {
-    success: (msg, title = 'Éxito') => addNotification('success', msg, title),
-    error: (msg, title = 'Error') => addNotification('error', msg, title),
-    warning: (msg, title = 'Advertencia') => addNotification('warning', msg, title),
-    info: (msg, title = 'Información') => addNotification('info', msg, title),
+    success: (a, b) => {
+      const title = b ? a : 'Éxito';
+      const msg = b ? b : a;
+      addNotification('success', msg, title);
+    },
+    error: (a, b) => {
+      const title = b ? a : 'Error';
+      const msg = b ? b : a;
+      addNotification('error', msg, title);
+    },
+    warning: (a, b) => {
+      const title = b ? a : 'Advertencia';
+      const msg = b ? b : a;
+      addNotification('warning', msg, title);
+    },
+    info: (a, b) => {
+      const title = b ? a : 'Información';
+      const msg = b ? b : a;
+      addNotification('info', msg, title);
+    },
   };
 
   return (
@@ -41,5 +56,11 @@ export const useNotification = () => {
   if (!context) {
     throw new Error('useNotification debe ser usado dentro de un NotificationProvider');
   }
-  return context;
+  return {
+    ...context,
+    ...context.notify,
+    notify: context.notify,
+  };
 };
+
+export default useNotification;

@@ -21,7 +21,8 @@ export const BaseDataTable = ({
     const term = searchTerm.toLowerCase();
     return data.filter((item) =>
       columns.some((col) => {
-        const val = col.accessor ? item[col.accessor] : '';
+        const key = col.accessor || col.key;
+        const val = key ? item[key] : '';
         return String(val).toLowerCase().includes(term);
       })
     );
@@ -86,7 +87,7 @@ export const BaseDataTable = ({
                     letterSpacing: '0.05em',
                   }}
                 >
-                  {col.header}
+                  {col.header || col.label}
                 </th>
               ))}
             </tr>
@@ -152,11 +153,15 @@ export const BaseDataTable = ({
                     if (onRowClick) e.currentTarget.style.background = 'transparent';
                   }}
                 >
-                  {columns.map((col, cIdx) => (
-                    <td key={cIdx} style={{ padding: '0.9rem 1.25rem', color: 'var(--color-gris-carbon)' }}>
-                      {col.render ? col.render(row) : (row[col.accessor] ?? '-')}
-                    </td>
-                  ))}
+                  {columns.map((col, cIdx) => {
+                    const key = col.accessor || col.key;
+                    const val = key ? row[key] : undefined;
+                    return (
+                      <td key={cIdx} style={{ padding: '0.9rem 1.25rem', color: 'var(--color-gris-carbon)' }}>
+                        {col.render ? (col.render.length > 1 ? col.render(val, row) : col.render(row)) : (val ?? '-')}
+                      </td>
+                    );
+                  })}
                 </tr>
               ))
             )}
